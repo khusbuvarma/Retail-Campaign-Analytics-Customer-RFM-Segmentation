@@ -1,0 +1,22 @@
+📌 Project Overview
+This project delivers an end-to-end data analytics solution that evaluates marketing campaign effectiveness and analyzes consumer behavior for a retail brand. Using a dataset consisting of 125,000 transaction records and 6,800+ campaign responses, I built a complete analytics pipeline.
+The primary goal was to calculate Recency, Frequency, and Monetary (RFM) values to segment the customer base, track historical revenue KPIs dynamically over a multi-year period, and isolate key behavioral traits of consumers who actively engaged with marketing campaigns.
+🛠️ Tech Stack & Architecture
+•	Data Engineering & Querying: MySQL Workbench (Native Bulk Processing via LOAD DATA INFILE)
+•	Data Processing & Feature Engineering: Python 3 (Pandas, NumPy, Google Colab)
+•	Exploratory Data Analysis (EDA): Seaborn, Matplotlib
+•	Business Intelligence & Dashboards: Microsoft Power BI Desktop (DAX, Data Modeling, Time-Intelligence Tables)
+📈 Key Business Insights & Findings
+1.	Responders are High-Value Drivers: Customers who responded to the campaign exhibit a significantly stronger purchasing profile. The average lifetime spend (Monetary Value) of a campaign responder is ~$1,500 compared to just ~$1,100 for non-responders.
+2.	Frequency Controls Engagement: Responders visited the store more frequently, averaging 22 transactions over their lifetime compared to 17 transactions for non-responders. This confirms a clear correlation between store visitation frequency and brand loyalty/responsiveness.
+3.	The 2015 Retention Alert: While unique active customer metrics remained highly steady at ~99% market penetration from 2011 through 2014, active customer counts dropped significantly to 4,225 in early 2015. This pattern provides an actionable business alert for targeted customer win-back strategies.
+4.	Target Benchmark Performance: The overall campaign response rate sits at 9.39%. When cross-filtering the data model dynamically across individual operational years, customer responsiveness remains highly stable, fluctuating within a narrow $0.1\%$ window against a standard $10\%$ corporate benchmark.
+🚀 Step-by-Step Implementation
+Phase 1: Python Data Engineering (Jupyter / Google Colab)
+•	Standardized date parsing schemas on 125,000 records to calculate a baseline historical benchmark.
+•	Aggregated individual purchase footprints to extract customer lifetime vectors:
+o	Recency: Days elapsed since the customer's maximum transaction date.
+o	Frequency: Total count of unique transactional line items.
+o	Monetary: Sum total of customer historic purchase valuations.
+•	Exported engineered tables into clean CSV structures optimized for performance across downstream application engines.
+
